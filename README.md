@@ -1,8 +1,8 @@
 Rulerbar
 ========
 
-Rulebar is a horizontal progress indicator plugin for vim displayed
-in the statusline.
+[Rulebar](https://github.com/zenzike/vim-rulerbar) is a horizontal progress
+indicator plugin for vim displayed in the statusline.
 
 For documentation, go to the [reference manual](https://raw.github.com/zenzike/vim-rulerbar/master/doc/rulerbar.txt),
 which is best viewed in vim after installation:
@@ -30,4 +30,5 @@ to clone rulerbar into your bundle directory:
 License
 -------
 
-Rulerbar is released under a BSD3 license.
+Rulerbar is released under a BSD3 license. Full details can be found in the
+`LICENSE.md` file distributed with the source.
