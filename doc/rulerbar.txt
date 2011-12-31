@@ -1,0 +1,64 @@
+*rulerbar.txt* The awesome rulerbar progress indicator!
+*rulerbar*
+
+                ______        _              ______               ~
+               (_____ \      | |            (____  \              ~
+                _____) )_   _| | _____  ____ ____)  )_____  ____  ~
+               |  __  /| | | | || ___ |/ ___)  __  ((____ |/ ___) ~
+               | |  \ \| |_| | || ____| |   | |__)  ) ___ | |     ~
+               |_|   |_|____/ \_)_____)_|   |______/\_____|_|     ~
+
+
+                              Reference Manual~
+
+==============================================================================
+INTRODUCTION                                           *rulerbar-introduction*
+
+The 'rulerbar' plugin displays your progress through a file by modifying the
+'ruler' in the 'statusline' with a progress bar. By default, using the rulerbar
+shows something like the following at the bottom of your screen:
+
+                         37,16    ┈┈┈███████┈ 78% ~
+
+This shows the line number, column number, rulerbar and percentage through the
+current file. The rulerbar represents the contents of a buffer as a single
+line, where a filled block is used to indicate the view that the current
+window has of that buffer.
+
+Of course you might want to change the exact position of the rulerbar and
+other ruler elements. To do so, use the |%{w:rulerformat}| option in a
+'rulerformat' declaration. When loaded, this plugin sets the following:
+>
+    set rulerformat=%24(%l,%c%V%=\ %<%{w:rulerbar}\ %P%)
+<
+Set this to suit your needs in your |.vimrc| file, using the syntax described
+in the 'statusline' documentation.
+
+
+==============================================================================
+OPTIONS                                                     *rulerbar-options*
+
+                                                           *'rulerbar_buffer'*
+Default: '┈'
+This is the text used to display the rulerbar portion of the buffer that is not
+in view of the current window. This can be set to any text.
+>
+    let g:rulerbar_buffer='-'
+<
+
+                                                           *'rulerbar_window'*
+Default: '█'
+This option sets the text used to display the rulerbar portion of the buffer
+that is in view of the current window.
+>
+    let g:rulerbar_window='#'
+<
+
+                                                            *'rulerbar_width'*
+Default: 10
+The width of the rulerbar is set with this variable.
+>
+    let g:rulerbar_width=8
+<
+
+ vim:tw=78:ts=8:ft=help:norl:
